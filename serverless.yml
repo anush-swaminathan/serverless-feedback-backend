@@ -45,14 +45,7 @@ provider:
 
   # you can define service wide environment variables here
   environment:
-    #    db_url: mongodb+srv://roledin.z707g.mongodb.net/
-    #    db_user: roledIn
-    #    db_password: 2019!@#RoledIn
-    #    db_name: roledin-test
-    #    bucket_name: roledin-test
     user_pool: ap-south-1_rxZdv5Odl
-#    aws_key: AKIA5MW4FDVXDPOJWUXX
-#    aws_secret: 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
 
 # you can add packaging information here
 package:
