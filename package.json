@@ -1,0 +1,11 @@
+{
+  "name": "serverless-workshop",
+  "version": "1.0.0",
+  "scripts": {
+    "serverless": "serverless",
+    "deploy": "serverless deploy"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.805.0"
+  }
+}
