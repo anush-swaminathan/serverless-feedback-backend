@@ -29,9 +29,6 @@ def get(event, context):
         TableName='Feedbacks'
     )
 
-    for i in feedback['Items']:
-        d = ast.literal_eval((json.dumps(i, cls=DecimalEncoder)))
-
     return {
         "statusCode": 200,
         "body": json.dumps(feedback['Items']),
