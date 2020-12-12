@@ -45,7 +45,7 @@ provider:
 
   # you can define service wide environment variables here
   environment:
-    user_pool: ap-south-1_rxZdv5Odl
+    user_pool: <Your User Pool ID>
 
 # you can add packaging information here
 package:
