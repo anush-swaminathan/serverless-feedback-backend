@@ -91,6 +91,34 @@ functions:
       arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
     runtime: nodejs12.x
     role: arn:aws:iam::920658451822:role/ServerlessWorkshop
+  enableUser:
+    handler: python/users.enable
+    events:
+      - http:
+          path: users/{id}
+          method: put
+          cors: true
+          authorizer:
+            name: ServerlessWorkshop
+            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+    authorizer:
+      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+    runtime: python3.6
+    role: arn:aws:iam::920658451822:role/ServerlessWorkshop
+  disableUser:
+    handler: python/users.disable
+    events:
+      - http:
+          path: users/{id}
+          method: delete
+          cors: true
+          authorizer:
+            name: ServerlessWorkshop
+            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+    authorizer:
+      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+    runtime: python3.6
+    role: arn:aws:iam::920658451822:role/ServerlessWorkshop
   getFeedback:
     handler: python/feedback.get
     events:

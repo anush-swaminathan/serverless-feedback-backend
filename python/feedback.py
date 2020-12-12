@@ -14,10 +14,9 @@ def get(event, context):
             }
         }
 
-
     user = event['requestContext']['authorizer']['claims']
 
-    if not user['custom:role'] and user['custom:role'] != 'admin':
+    if user['custom:role'] != 'admin':
         return {
             "statusCode": 409,
             "body": json.dumps({'Error': '', 'Reference': context['awsRequestId']}),
