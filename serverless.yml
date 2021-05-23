@@ -27,25 +27,9 @@ provider:
   stage: dev
   region: ap-south-1
 
-  # you can add statements to the Lambda function's IAM Role here
-  #  iamRoleStatements:
-  #    - Effect: "Allow"
-  #      Action:
-  #        - "s3:ListBucket"
-  #      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
-  #    - Effect: "Allow"
-  #      Action:
-  #        - "s3:PutObject"
-  #      Resource:
-  #        Fn::Join:
-  #          - ""
-  #          - - "arn:aws:s3:::"
-  #            - "Ref" : "ServerlessDeploymentBucket"
-  #            - "/*"
-
   # you can define service wide environment variables here
   environment:
-    user_pool: <Your User Pool ID>
+    user_pool: ap-south-1_7dj6ESp1Y
 
 # you can add packaging information here
 package:
@@ -65,9 +49,9 @@ functions:
           cors: true
           authorizer:
             name: ServerlessWorkshop
-            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     authorizer:
-      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     runtime: nodejs12.x
     role: arn:aws:iam::920658451822:role/ServerlessWorkshop
   createUser:
@@ -79,9 +63,9 @@ functions:
           cors: true
           authorizer:
             name: ServerlessWorkshop
-            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     authorizer:
-      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     runtime: nodejs12.x
     role: arn:aws:iam::920658451822:role/ServerlessWorkshop
   enableUser:
@@ -93,9 +77,9 @@ functions:
           cors: true
           authorizer:
             name: ServerlessWorkshop
-            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     authorizer:
-      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     runtime: python3.6
     role: arn:aws:iam::920658451822:role/ServerlessWorkshop
   disableUser:
@@ -107,9 +91,9 @@ functions:
           cors: true
           authorizer:
             name: ServerlessWorkshop
-            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     authorizer:
-      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     runtime: python3.6
     role: arn:aws:iam::920658451822:role/ServerlessWorkshop
   getFeedback:
@@ -121,9 +105,9 @@ functions:
           cors: true
           authorizer:
             name: ServerlessWorkshop
-            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     authorizer:
-      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     runtime: python3.6
     role: arn:aws:iam::920658451822:role/ServerlessWorkshop
   addFeedback:
@@ -135,9 +119,9 @@ functions:
           cors: true
           authorizer:
             name: ServerlessWorkshop
-            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+            arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     authorizer:
-      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_rxZdv5Odl
+      arn: arn:aws:cognito-idp:ap-south-1:920658451822:userpool/ap-south-1_7dj6ESp1Y
     runtime: nodejs12.x
     role: arn:aws:iam::920658451822:role/ServerlessWorkshop
 #      - websocket: $connect
